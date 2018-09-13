@@ -1,9 +1,9 @@
-# checking and comparing chemical networks
+# Checking and comparing chemical networks
 
 In this directory, several python routines are provided to check the consistency of chemical networks, and compare chemical networks with each other. I re-wrote these routines in python using pandas dataframes to significantly increase the computational efficiency. As an example, the chemical network used in Taquet, Furuya, Walsh, & van Dishoeck (2016) and updated with some new reactions together with a corrupted one are provided. 
 
 
-## check_network.py
+## ```check_network.py```
 
 This routine checks the consistency between the species and reaction files that are usually used by astrochemical models to describe a chemical network. You need to specify the name of the species and reactions files, and the suffix name of the output files as inputs and  check_network.py (```python3 check_network.py```) will check that:
 - there is no duplicated species in the species file
@@ -20,7 +20,7 @@ For both files, the python routine will use this line to determine the location 
 The routine will generate a series of .csv files that list the duplicated species, duplicated reactions, reactions that are not conservative, and reactions containing reactants/products not listed in the species file. 
 
 
-## compare_networks.py
+## `compare_networks.py`
 
 Once the chemical networks have been checked with the check_networy.py routine, it might be useful to compare them to have a summary of the missing reactions among the networks or the rates or temperature ranges that have been updated. To this aim, run compare_networks.py with python3 (```python3 compare_networks.py```) to check:
 - the reactions that are missing in one of the two networks
